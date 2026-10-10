@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="x-apple-disable-message-reformatting">
+  <title>Verify your Azentz account</title>
+</head>
+
+<body style="margin:0;padding:0;background:#f6f3ee;font-family:Arial,Helvetica,sans-serif;color:#20252a;">
+
+<table role="presentation"
+       width="100%"
+       cellspacing="0"
+       cellpadding="0"
+       border="0"
+       style="width:100%;background:#f6f3ee;margin:0;padding:0;">
+
+  <tr>
+    <td align="center" style="padding:32px 16px;">
+
+      <!-- Main Card -->
+      <table role="presentation"
+             width="100%"
+             cellspacing="0"
+             cellpadding="0"
+             border="0"
+             style="max-width:620px;background:#ffffff;border-radius:18px;overflow:hidden;">
+
+        <!-- Logo -->
+        <tr>
+          <td align="center" style="padding:36px 30px 20px 30px;">
+
+            <img
+              src="https://azentz-assets.pages.dev/email/azentz-logo.png"
+              width="260"
+              alt="Azentz"
+              style="display:block;width:260px;max-width:80%;height:auto;border:0;outline:none;text-decoration:none;"
+            >
+
+          </td>
+        </tr>
+
+        <!-- Brand Accent -->
+        <tr>
+          <td align="center" style="padding:0 40px;">
+
+            <table role="presentation"
+                   cellspacing="0"
+                   cellpadding="0"
+                   border="0">
+
+              <tr>
+                <td style="width:42px;height:3px;background:#c89b3c;font-size:0;line-height:0;">
+                  &nbsp;
+                </td>
+
+                <td style="width:18px;height:3px;background:#198b9a;font-size:0;line-height:0;">
+                  &nbsp;
+                </td>
+              </tr>
+
+            </table>
+
+          </td>
+        </tr>
+
+        <!-- Heading -->
+        <tr>
+          <td align="center" style="padding:30px 40px 0 40px;">
+
+            <h1 style="
+              margin:0;
+              font-family:Georgia,'Times New Roman',serif;
+              font-size:34px;
+              line-height:42px;
+              font-weight:600;
+              color:#20252a;
+            ">
+              Verify your email
+            </h1>
+
+            <p style="
+              margin:18px 0 0 0;
+              font-size:16px;
+              line-height:26px;
+              color:#626a70;
+            ">
+              Welcome to Azentz! Please use the verification code below
+              to confirm your email address.
+            </p>
+
+          </td>
+        </tr>
+
+        <!-- Verification Code -->
+        <tr>
+          <td style="padding:30px 40px 24px 40px;">
+
+            <table role="presentation"
+                   width="100%"
+                   cellspacing="0"
+                   cellpadding="0"
+                   border="0"
+                   style="
+                     background:#faf8f4;
+                     border:1px solid #dfcfae;
+                     border-radius:12px;
+                   ">
+
+              <tr>
+                <td align="center" style="padding:25px 20px 28px 20px;">
+
+                  <div style="
+                    font-size:12px;
+                    line-height:18px;
+                    letter-spacing:3px;
+                    text-transform:uppercase;
+                    color:#967b45;
+                    font-weight:600;
+                  ">
+                    Verification Code
+                  </div>
+
+                  <div style="
+                    margin-top:12px;
+                    font-size:38px;
+                    line-height:46px;
+                    font-weight:700;
+                    letter-spacing:9px;
+                    color:#20252a;
+                  ">
+                    {####}
+                  </div>
+
+                </td>
+              </tr>
+
+            </table>
+
+          </td>
+        </tr>
+
+        <!-- Instructions -->
+        <tr>
+          <td align="center" style="padding:0 40px 28px 40px;">
+
+            <p style="
+              margin:0;
+              font-size:14px;
+              line-height:22px;
+              color:#6d7479;
+            ">
+              Enter this code in Azentz to complete your registration.
+            </p>
+
+            <p style="
+              margin:10px 0 0 0;
+              font-size:13px;
+              line-height:20px;
+              color:#999f9f;
+            ">
+              For your security, never share this verification code with anyone.
+            </p>
+
+          </td>
+        </tr>
+
+        <!-- Divider -->
+        <tr>
+          <td style="padding:0 40px;">
+
+            <table role="presentation"
+                   width="100%"
+                   cellspacing="0"
+                   cellpadding="0"
+                   border="0">
+
+              <tr>
+                <td style="height:1px;background:#ebe6dd;font-size:0;line-height:0;">
+                  &nbsp;
+                </td>
+              </tr>
+
+            </table>
+
+          </td>
+        </tr>
+
+        <!-- Security -->
+        <tr>
+          <td align="center" style="padding:24px 40px 12px 40px;">
+
+            <p style="
+              margin:0;
+              font-size:13px;
+              line-height:20px;
+              color:#777f83;
+            ">
+              If you didn't create an Azentz account,
+              you can safely ignore this email.
+            </p>
+
+          </td>
+        </tr>
+
+        <!-- Footer -->
+        <tr>
+          <td align="center" style="padding:18px 40px 32px 40px;">
+
+            <table role="presentation"
+                   cellspacing="0"
+                   cellpadding="0"
+                   border="0">
+
+              <tr>
+                <td style="width:38px;height:2px;background:#c89b3c;font-size:0;line-height:0;">
+                  &nbsp;
+                </td>
+
+                <td style="width:16px;height:2px;background:#198b9a;font-size:0;line-height:0;">
+                  &nbsp;
+                </td>
+              </tr>
+
+            </table>
+
+            <p style="
+              margin:14px 0 0 0;
+              font-size:12px;
+              line-height:18px;
+              color:#9a9fa2;
+            ">
+              © 2026 Azentz
+            </p>
+
+            <p style="
+              margin:4px 0 0 0;
+              font-size:12px;
+              line-height:18px;
+              color:#a9adaf;
+            ">
+              Create. Edit. Preserve your stories.
+            </p>
+
+          </td>
+        </tr>
+
+      </table>
+
+      <!-- Automated Email Notice -->
+      <p style="
+        margin:18px 0 0 0;
+        font-size:11px;
+        line-height:17px;
+        color:#a6aaa9;
+        text-align:center;
+      ">
+        This is an automated security email from Azentz.
+      </p>
+
+    </td>
+  </tr>
+
+</table>
+
+</body>
+</html>
+
+

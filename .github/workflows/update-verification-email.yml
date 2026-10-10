@@ -1,0 +1,68 @@
+name: update-verification-email
+
+on:
+  pull_request:
+    paths:
+      - email/verification.html
+      - email/azentz-logo-transparent.png
+      - scripts/update-cognito-verification-email.sh
+      - .github/workflows/update-verification-email.yml
+  push:
+    branches:
+      - main
+    paths:
+      - email/verification.html
+      - email/azentz-logo-transparent.png
+      - scripts/update-cognito-verification-email.sh
+      - .github/workflows/update-verification-email.yml
+  workflow_dispatch:
+  schedule:
+    # 00:30 Asia/Kolkata on 1 January. GitHub schedules are UTC.
+    - cron: "0 19 31 12 *"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: validate template
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate the verification template
+        run: ./scripts/update-cognito-verification-email.sh --validate
+
+  update:
+    name: update Cognito verification email
+    needs: validate
+    if: github.event_name == 'workflow_dispatch' || github.event_name == 'schedule' || (github.event_name == 'push' && github.ref == 'refs/heads/main')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    concurrency:
+      group: azentz-config-cognito-verification-email
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+      - name: Require the Cognito email role
+        env:
+          ROLE_ARN: ${{ vars.COGNITO_EMAIL_ROLE_ARN }}
+        run: |
+          if [ -z "${ROLE_ARN}" ]; then
+            echo "Set the repository variable COGNITO_EMAIL_ROLE_ARN."
+            echo "The role must trust repo:M-VINOTH/azentz-config:ref:refs/heads/main"
+            echo "and allow cognito-idp:DescribeUserPool and cognito-idp:UpdateUserPool"
+            echo "on user pool ap-south-1_KqqgVA9rC only."
+            exit 1
+          fi
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.COGNITO_EMAIL_ROLE_ARN }}
+          aws-region: ap-south-1
+      - name: Update the Cognito verification email
+        env:
+          AWS_REGION: ap-south-1
+          COGNITO_USER_POOL_ID: ap-south-1_KqqgVA9rC
+        run: ./scripts/update-cognito-verification-email.sh
